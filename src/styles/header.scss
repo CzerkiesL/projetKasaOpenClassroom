@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    nav {
+        height: 100%;
+
+        a {
+            font-size: 24px;
+            margin-left: 30px;
+            color: #333;
+            font-weight: 500;
+            line-height: 68px;
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        nav {
+            a {
+                font-size: 14px;
+                line-height: 48px;
+            }
+        }
+    }
+}
