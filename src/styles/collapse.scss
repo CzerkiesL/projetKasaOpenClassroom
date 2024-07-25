@@ -1,0 +1,47 @@
+.collapse-container {
+    margin: 40px auto;
+    width: 80%;
+    .collapse-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        color: white;
+        background: #ff6060;
+        border-radius: 5px;
+        button {
+            cursor: pointer;
+            position: relative;
+            background: none;
+            width: 52px;
+            &::before {
+                display: block;
+                position: absolute;
+                content: "";
+                width: 14px;
+                height: 3px;
+                background: white;
+                top: 50%;
+                left: 15px;
+                transform: rotate(-45deg);
+            }
+            &::after {
+                display: block;
+                position: absolute;
+                content: "";
+                width: 14px;
+                height: 3px;
+                background: white;
+                top: 50%;
+                right: 15px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .collapse-text {
+        padding: 20px;
+        background: #f6f6f6;
+        p {
+            font-size: 20px;
+        }
+    }
+}

@@ -11,7 +11,7 @@ export default function Header() {
     const [display, setDisplay] = useState("desktop");
 
     window.addEventListener("resize", () => {
-        if (window.innerWidth < 550) {
+        if (window.innerWidth < 750) {
             setDisplay("mobile");
         } else {
             setDisplay("desktop");

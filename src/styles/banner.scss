@@ -1,0 +1,44 @@
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    height: 225px;
+    border: 1px solid #000;
+    border-radius: 25px;
+
+    img {
+        width: 100%;
+        transform: translateY(-50%);
+    }
+
+    .title-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.25);
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-size: 40px;
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .banner-container {
+        height: 120px;
+
+        img {
+            transform: translateY(-25%);
+        }
+
+        .title-container {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
