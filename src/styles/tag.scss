@@ -1,0 +1,28 @@
+.tag {
+    margin: 5px;
+    background-color: #ff6060;
+    display: inline-block;
+    height: 25px;
+    width: 115px;
+    border-radius: 12px;
+    text-align: center;
+    .tag-name {
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .tag {
+        height: 18px;
+        width: 84px;
+        border-radius: 5px;
+        .tag-name {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.rate-container {
+    img {
+        width: 36px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .rate-container {
+        img {
+            width: 18px;
+        }
+    }
+}

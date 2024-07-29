@@ -10,12 +10,22 @@
     text-decoration: none;
 }
 
-body {
-    width: 90%;
+body,
+main,
+header {
     margin: auto;
-    max-width: 1400px;
+    max-width: 1350px;
+}
+
+main,
+header {
+    width: 90%;
 }
 
 li {
     list-style: none;
+}
+
+main {
+    min-height: calc(100vh - 200px - 132px);
 }

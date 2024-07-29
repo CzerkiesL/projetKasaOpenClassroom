@@ -1,0 +1,95 @@
+.logement-page {
+    .info-container {
+        display: grid;
+        grid-template-areas:
+            "where who"
+            "what what";
+        .where {
+            grid-area: where;
+            h1 {
+                color: #ff6060;
+                font-weight: 500;
+                font-size: 36px;
+                margin-bottom: 5px;
+            }
+            h2 {
+                font-weight: 500;
+                font-size: 18px;
+            }
+            .tag-container {
+                margin-top: 10px;
+                display: flex;
+            }
+        }
+        .who {
+            grid-area: who;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            .host-container {
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                p {
+                    width: 80px;
+                    text-align: right;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #ff6060;
+                }
+                img {
+                    width: 64px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .what {
+            grid-area: what;
+            display: flex;
+            gap: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .logement-page {
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            .where {
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 5px;
+                }
+                h2 {
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+                .tag-container {
+                    flex-wrap: wrap;
+                }
+            }
+            .who {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                .host-container {
+                    margin-bottom: 0px;
+                    p {
+                        width: 60px;
+                        font-size: 14px;
+                    }
+                    img {
+                        width: 45px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .what {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+}

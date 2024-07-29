@@ -1,4 +1,5 @@
 .collapse-container {
+    position: relative;
     margin: 40px auto;
     width: 80%;
     .collapse-header {
@@ -13,6 +14,7 @@
             position: relative;
             background: none;
             width: 52px;
+            transition: transform 0.3s ease;
             &::before {
                 display: block;
                 position: absolute;
@@ -35,13 +37,40 @@
                 right: 15px;
                 transform: rotate(45deg);
             }
+            &.active {
+                transform: rotate(180deg);
+            }
         }
     }
     .collapse-text {
-        padding: 20px;
+        transform: scaleY(0);
+        transform-origin: top;
+        overflow: hidden;
         background: #f6f6f6;
-        p {
-            font-size: 20px;
+        height: 0;
+        padding: 0 20px;
+        transition: padding 0.3s ease, transform 0.3s ease;
+        &.active {
+            transform: scaleY(1);
+            height: fit-content;
+            padding: 20px 20px;
         }
+        p,
+        ul {
+            opacity: 0;
+            font-size: 20px;
+            transition: opacity 0.2s ease 0.2s;
+            &.active,
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .collapse-container {
+        margin: 20px auto;
+        width: 100%;
     }
 }
