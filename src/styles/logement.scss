@@ -1,27 +1,29 @@
-.logement-page {
-    .info-container {
+@import './variable';
+
+#logement {
+    .logement__info-container {
         display: grid;
         grid-template-areas:
             "where who"
             "what what";
-        .where {
+        &--where {
             grid-area: where;
             h1 {
-                color: #ff6060;
+                color: $main-color;
                 font-weight: 500;
-                font-size: 36px;
+                font-size: $very-big;
                 margin-bottom: 5px;
             }
             h2 {
                 font-weight: 500;
-                font-size: 18px;
+                font-size: $big;
             }
             .tag-container {
                 margin-top: 10px;
                 display: flex;
             }
         }
-        .who {
+        &--who {
             grid-area: who;
             display: flex;
             flex-direction: column;
@@ -34,9 +36,9 @@
                 p {
                     width: 80px;
                     text-align: right;
-                    font-size: 18px;
+                    font-size: $medium;
                     font-weight: 500;
-                    color: #ff6060;
+                    color: $main-color;
                 }
                 img {
                     width: 64px;
@@ -44,7 +46,7 @@
                 }
             }
         }
-        .what {
+        &--what {
             grid-area: what;
             display: flex;
             gap: 80px;
@@ -53,24 +55,24 @@
 }
 
 @media screen and (max-width: 850px) {
-    .logement-page {
-        .info-container {
+    #logement {
+        .logement__info-container {
             display: flex;
             flex-direction: column;
-            .where {
+            &--where {
                 h1 {
-                    font-size: 24px;
+                    font-size: $big;
                     margin-bottom: 5px;
                 }
                 h2 {
                     font-weight: 500;
-                    font-size: 14px;
+                    font-size: $small;
                 }
                 .tag-container {
                     flex-wrap: wrap;
                 }
             }
-            .who {
+            &--who {
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
@@ -78,7 +80,7 @@
                     margin-bottom: 0px;
                     p {
                         width: 60px;
-                        font-size: 14px;
+                        font-size: $small;
                     }
                     img {
                         width: 45px;
@@ -86,7 +88,7 @@
                     }
                 }
             }
-            .what {
+            &--what {
                 flex-direction: column;
                 gap: 0;
             }

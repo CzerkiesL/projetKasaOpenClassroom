@@ -18,9 +18,9 @@ function Rate({ star }) {
     }
 
     return (
-        <div className="rate-container">
+        <div className="rating">
             {rateStar.map((element, index) => {
-                return <img key={index} src={element} />;
+                return <img className="rating__star" key={index} src={element} />;
             })}
         </div>
     );

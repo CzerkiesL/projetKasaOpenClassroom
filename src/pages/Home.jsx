@@ -8,14 +8,14 @@ import "../styles/Home.scss";
 
 export default function Home() {
     return (
-        <main>
+        <main id="home">
             <Banner
                 title={"Chez vous, partout et ailleurs"}
                 background={bannerBackground}
             />
 
-            <section className="card-container">
-                <ul className="card-list">
+            <section className="home__card-container">
+                <ul className="home__card-container--list">
                     {PropertyList.map((property) => {
                         return (
                             <li key={property.id}>

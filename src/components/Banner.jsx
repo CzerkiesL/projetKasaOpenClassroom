@@ -4,12 +4,12 @@ import "../styles/banner.scss";
 
 function Banner({ title, background }) {
     return (
-        <div className="banner-container">
-            <div className="title-container">
-                {title !== "" ? <h1>{title}</h1> : null}
+        <section id="banner">
+            <div className="banner__title-container">
+                {title !== "" ? <h1 className="banner__title-container--title">{title}</h1> : null}
             </div>
-            <img src={background} alt="image de paysage" />
-        </div>
+            <img className="banner__background" src={background} alt="image de paysage" />
+        </section>
     );
 }
 

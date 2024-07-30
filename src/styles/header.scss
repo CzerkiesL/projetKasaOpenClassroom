@@ -1,15 +1,17 @@
-header {
+@import './variable';
+
+#header {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 
-    nav {
+    .header__navbar {
         height: 100%;
 
-        a {
-            font-size: 24px;
+        &--link {
+            font-size: $big;
             margin-left: 30px;
-            color: #333;
+            color: $dark;
             font-weight: 500;
             line-height: 68px;
 
@@ -20,9 +22,9 @@ header {
     }
 
     @media screen and (max-width: 750px) {
-        nav {
-            a {
-                font-size: 14px;
+        .header__navbar {
+            &--link {
+                font-size: $small;
                 line-height: 48px;
             }
         }

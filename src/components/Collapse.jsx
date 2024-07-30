@@ -13,23 +13,35 @@ function Collapse(props) {
     }
 
     return (
-        <section className="collapse-container">
-            <div className="collapse-header">
-                <h2>{title}</h2>
+        <section id="collapse">
+            <div className="collapse__header">
+                <h2 className="collapse__header--title">{title}</h2>
                 <button
-                    className={display ? "active" : null}
+                    className={`collapse__header--btn ${
+                        display ? "active" : null
+                    }`}
                     onClick={handleClick}
                 ></button>
             </div>
-            <div className={`collapse-text ${display && "active"}`}>
+            <div className={`collapse__text-container ${display && "active"}`}>
                 {textIsList ? (
-                    <ul className={display ? "active" : null}>
+                    <ul
+                        className={`collapse__text-container--text ${
+                            display ? "active" : null
+                        }`}
+                    >
                         {text.map((elem) => {
                             return <li key={elem}>{elem}</li>;
                         })}
                     </ul>
                 ) : (
-                    <p className={display ? "active" : null}>{text}</p>
+                    <p
+                        className={`collapse__text-container--text ${
+                            display ? "active" : null
+                        }`}
+                    >
+                        {text}
+                    </p>
                 )}
             </div>
         </section>

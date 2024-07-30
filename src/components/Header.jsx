@@ -19,7 +19,7 @@ export default function Header() {
     });
 
     return (
-        <header>
+        <header id="header">
             <Link to="/">
                 <img
                     src={display === "desktop" ? LogoXL : LogoXS}
@@ -27,15 +27,19 @@ export default function Header() {
                 />
             </Link>
 
-            <nav>
+            <nav className="header__navbar">
                 <Link
-                    className={location.pathname === "/" ? "active" : null}
+                    className={`header__navbar--link ${
+                        location.pathname === "/" ? "active" : null
+                    }`}
                     to="/"
                 >
                     {display === "desktop" ? "Accueil" : "ACCUEIL"}
                 </Link>
                 <Link
-                    className={location.pathname === "/about" ? "active" : null}
+                    className={`header__navbar--link ${
+                        location.pathname === "/about" ? "active" : null
+                    }`}
                     to="/about"
                 >
                     {display === "desktop" ? "A Propos" : "A PROPOS"}

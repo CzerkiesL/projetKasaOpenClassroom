@@ -1,52 +1,50 @@
-.collapse-container {
+@import "./variable";
+
+#collapse {
     position: relative;
     margin: 40px auto;
     width: 80%;
-    .collapse-header {
+    .collapse__header {
         display: flex;
         justify-content: space-between;
         padding: 15px;
-        color: white;
-        background: #ff6060;
+        color: $white;
+        background: $main-color;
         border-radius: 5px;
-        button {
+        &--btn {
             cursor: pointer;
             position: relative;
             background: none;
             width: 52px;
             transition: transform 0.3s ease;
-            &::before {
-                display: block;
-                position: absolute;
-                content: "";
-                width: 14px;
-                height: 3px;
-                background: white;
-                top: 50%;
-                left: 15px;
-                transform: rotate(-45deg);
-            }
+            &::before,
             &::after {
                 display: block;
                 position: absolute;
                 content: "";
                 width: 14px;
                 height: 3px;
-                background: white;
+                background: $white;
                 top: 50%;
+            }
+            &::after {
                 right: 15px;
                 transform: rotate(45deg);
+            }
+            &::before {
+                left: 15px;
+                transform: rotate(-45deg);
             }
             &.active {
                 transform: rotate(180deg);
             }
         }
     }
-    .collapse-text {
+    .collapse__text-container {
         transform: scaleY(0);
         transform-origin: top;
         overflow: hidden;
-        background: #f6f6f6;
+        background: $white;
         height: 0;
         padding: 0 20px;
         transition: padding 0.3s ease, transform 0.3s ease;
@@ -55,12 +53,10 @@
             height: fit-content;
             padding: 20px 20px;
         }
-        p,
-        ul {
+        &--text {
             opacity: 0;
-            font-size: 20px;
+            font-size: $medium;
             transition: opacity 0.2s ease 0.2s;
-            &.active,
             &.active {
                 opacity: 1;
             }
@@ -69,7 +65,7 @@
 }
 
 @media screen and (max-width: 850px) {
-    .collapse-container {
+    #collapse {
         margin: 20px auto;
         width: 100%;
     }

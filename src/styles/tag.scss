@@ -1,15 +1,17 @@
+@import "./variable";
+
 .tag {
     margin: 5px;
-    background-color: #ff6060;
+    background-color: $main-color;
     display: inline-block;
     height: 25px;
     width: 115px;
     border-radius: 12px;
     text-align: center;
-    .tag-name {
-        color: white;
-        font-size: 14px;
-        font-weight: 700;
+    &__name {
+        color: $white;
+        font-size: $small;
+        font-weight: 500;
         line-height: 25px;
     }
 }
@@ -19,8 +21,8 @@
         height: 18px;
         width: 84px;
         border-radius: 5px;
-        .tag-name {
-            font-size: 12px;
+        &__name {
+            font-size: $very-small;
             font-weight: 500;
             line-height: 18px;
         }

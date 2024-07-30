@@ -1,33 +1,35 @@
-.error-container {
+@import "./variable";
+
+#error {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    h1 {
-        color: #ff6060;
+    .error__title {
+        color: $main-color;
         font-size: 250px;
         font-weight: 700;
     }
-    h2 {
+    .error__text {
         text-align: center;
-        color: #ff6060;
-        font-size: 36px;
+        color: $main-color;
+        font-size: $very-big;
     }
-    a {
-        color: #333;
+    .error__link {
+        color: $dark;
         font-weight: 700;
         text-decoration: underline;
-        font-size: underline;
+        font-size: $big;
     }
 }
 
 @media screen and (max-width: 750px) {
     .error-container {
-        h1 {
+        .error__title {
             font-size: 100px;
         }
-        h2 {
-            font-size: 18px;
+        .error__text {
+            font-size: $medium;
         }
     }
 }

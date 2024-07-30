@@ -26,10 +26,10 @@ export default function Logement() {
         return <Navigate to="/error" />;
     }
     return (
-        <main className="logement-page">
+        <main id="logement">
             <Slideshow pictures={logement.pictures} alt={logement.title} />
-            <section className="info-container">
-                <div className="where">
+            <section className="logement__info-container">
+                <div className="logement__info-container--where">
                     <h1>{logement.title}</h1>
                     <h2>{logement.location}</h2>
                     <ul className="tag-container">
@@ -42,7 +42,7 @@ export default function Logement() {
                         })}
                     </ul>
                 </div>
-                <div className="who">
+                <div className="logement__info-container--who">
                     <div className="host-container">
                         <p>{logement.host.name}</p>
                         <img
@@ -52,7 +52,7 @@ export default function Logement() {
                     </div>
                     <Rate star={logement.rating} />
                 </div>
-                <div className="what">
+                <div className="logement__info-container--what">
                     <Collapse title="Description" text={logement.description} />
                     <Collapse title="Équipement" text={logement.equipments} />
                 </div>

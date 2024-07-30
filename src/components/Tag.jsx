@@ -5,7 +5,7 @@ import "../styles/tag.scss";
 function Tag({ text }) {
     return (
         <div className="tag">
-            <p className="tag-name">{text}</p>
+            <p className="tag__name">{text}</p>
         </div>
     );
 }

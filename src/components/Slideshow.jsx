@@ -25,23 +25,23 @@ function Slideshow({ pictures, alt }) {
     }
 
     return (
-        <section className="slide-container">
+        <section id="slideshow">
             {manyPics && (
-                <div className="slide-btn-container">
+                <div className="slideshow__btn-container">
                     <button
                         onClick={previousPics}
-                        className="slide-btn previous"
+                        className="slideshow__btn-container--btn btn-previous"
                     ></button>
-                    <div className="slide-infos">
+                    <div className="slideshow__btn-container--indicator">
                         <p>{currentPicture + 1 + " / " + pictures.length}</p>
                     </div>
                     <button
                         onClick={nextPics}
-                        className="slide-btn next"
+                        className="slideshow__btn-container--btn btn-next"
                     ></button>
                 </div>
             )}
-            <img src={pictures[currentPicture]} alt={alt} />
+            <img className="slideshow__picture" src={pictures[currentPicture]} alt={alt} />
         </section>
     );
 }
