@@ -8,6 +8,7 @@ function Collapse(props) {
     const [display, setDisplay] = useState(false);
 
     const textIsList = typeof text == "object";
+    
     function handleClick() {
         setDisplay(!display);
     }
@@ -17,9 +18,7 @@ function Collapse(props) {
             <div className="collapse__header">
                 <h2 className="collapse__header--title">{title}</h2>
                 <button
-                    className={`collapse__header--btn ${
-                        display ? "active" : null
-                    }`}
+                    className={`collapse__header--btn ${display && "active"}`}
                     onClick={handleClick}
                 ></button>
             </div>
@@ -27,7 +26,7 @@ function Collapse(props) {
                 {textIsList ? (
                     <ul
                         className={`collapse__text-container--text ${
-                            display ? "active" : null
+                            display && "active"
                         }`}
                     >
                         {text.map((elem) => {
@@ -37,7 +36,7 @@ function Collapse(props) {
                 ) : (
                     <p
                         className={`collapse__text-container--text ${
-                            display ? "active" : null
+                            display && "active"
                         }`}
                     >
                         {text}

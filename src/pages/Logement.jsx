@@ -12,19 +12,21 @@ export default function Logement() {
     const { idLogement } = useParams();
 
     function getLogement() {
-        let logement;
+        let currentLogement;
         Property.forEach((current) => {
-            if (current.id == idLogement) {
-                logement = current;
+            if (current.id === idLogement) {
+                currentLogement = current;
             }
         });
-        return logement;
+        return currentLogement;
     }
+
     const logement = getLogement();
 
     if (logement === undefined) {
         return <Navigate to="/error" />;
     }
+    
     return (
         <main id="logement">
             <Slideshow pictures={logement.pictures} alt={logement.title} />

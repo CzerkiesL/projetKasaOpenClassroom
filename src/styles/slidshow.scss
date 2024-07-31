@@ -1,4 +1,5 @@
 @import "./variable";
+@import "./animationSlider";
 
 #slideshow {
     position: relative;
@@ -79,6 +80,12 @@
         left: 50%;
         transform: translate(-50%, -50%);
         min-height: 100%;
+        &.left {
+            animation: slideLeft 0.2s ease;
+        }
+        &.right {
+            animation: slideRight 0.2s ease;
+        }
     }
 }
 

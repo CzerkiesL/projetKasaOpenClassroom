@@ -5,7 +5,7 @@
     background-color: $main-color;
     display: inline-block;
     height: 25px;
-    width: 115px;
+    padding: 0 15px;
     border-radius: 12px;
     text-align: center;
     &__name {
@@ -19,7 +19,6 @@
 @media screen and (max-width: 850px) {
     .tag {
         height: 18px;
-        width: 84px;
         border-radius: 5px;
         &__name {
             font-size: $very-small;

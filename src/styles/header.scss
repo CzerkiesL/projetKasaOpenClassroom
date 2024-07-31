@@ -1,4 +1,4 @@
-@import './variable';
+@import "./variable";
 
 #header {
     display: flex;
@@ -20,8 +20,10 @@
             }
         }
     }
+}
 
-    @media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
+    #header {
         .header__navbar {
             &--link {
                 font-size: $small;
